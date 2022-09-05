@@ -1,0 +1,1872 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AdminLTE 3 || Dashboard</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css" />
+  <!-- DataTables -->
+  <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css" />
+  <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css" />
+  <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css" />
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css" />
+  <link rel="stylesheet" href="plugins/select2/css/select2.min.css" />
+  <link rel="stylesheet" href="plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css" />
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css" />
+
+  <link rel="stylesheet" href="plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css" />
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+  <div class="wrapper">
+    <!-- Preloader -->
+    <div class="preloader flex-column justify-content-center align-items-center">
+      <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60" />
+    </div>
+
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light" style="background: #34adff">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="index.html" class="nav-link text-white">Home</a>
+        </li>
+
+      </ul>
+      <ul style=" z-index: 1;" class="nav navbar-nav navbar-right nav_bar_icons menu_right_li">
+        <li class="new_invoice_top_menu_link_li">
+          <a style="color: white;" href="new-invoice.html" class="new_bill_btn btn btn-success btn-sm btn-xs"><img
+              class="lazy_img" width="20" src="https://demo.bhisab.com/images/icon/bill.png" ><span
+              class="new_bill">&nbsp;New Invoice
+              <i class="far fa-plus-square"></i></span></a>
+        </li>
+        <li class="new_invoice_top_menu_link_li" style="margin:0 10px ;">
+          <a style="color: white;" href="new_invoice.php" class="new_bill_btn btn btn-success btn-sm btn-xs"
+            data-toggle="modal" data-target="#modal-default"><img class="lazy_img" width="20"
+              src="https://demo.bhisab.com/images/icon/bill.png"><span class=" new_bill">&nbsp;New Receive
+              <i class="far fa-plus-square"></i></span></a>
+        </li>
+        <li class="new_invoice_top_menu_link_li">
+          <a style="color: white;" href="new_invoice.php" class="new_bill_btn btn btn-success btn-sm btn-xs"
+            data-toggle="modal" data-target="#modal-expense"><img class="lazy_img" width="20"
+              src="https://demo.bhisab.com/images/icon/bill.png"><span class=" new_bill">&nbsp;New Expense
+              <i class="far fa-plus-square"></i></span></a>
+        </li>
+
+
+
+      </ul>
+      <!-- Right navbar links -->
+      <ul class="navbar-nav ml-auto">
+        <!-- Navbar Search -->
+        <li class="nav-item">
+          <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+            <i class="fas fa-search"></i>
+          </a>
+          <div class="navbar-search-block">
+            <form class="form-inline">
+              <div class="input-group input-group-sm">
+                <input class="form-control form-control-navbar" type="search" placeholder="Search"
+                  aria-label="Search" />
+                <div class="input-group-append">
+                  <button class="btn btn-navbar" type="submit">
+                    <i class="fas fa-search"></i>
+                  </button>
+                  <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </li>
+
+        <!-- Messages Dropdown Menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link" data-toggle="dropdown" href="#">
+            <i class="far fa-comments"></i>
+            <span class="badge badge-danger navbar-badge">3</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+            <a href="#" class="dropdown-item">
+              <!-- Message Start -->
+              <div class="media">
+                <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle" />
+                <div class="media-body">
+                  <h3 class="dropdown-item-title">
+                    Brad Diesel
+                    <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+                  </h3>
+                  <p class="text-sm">Call me whenever you can...</p>
+                  <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                </div>
+              </div>
+              <!-- Message End -->
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <!-- Message Start -->
+              <div class="media">
+                <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3" />
+                <div class="media-body">
+                  <h3 class="dropdown-item-title">
+                    John Pierce
+                    <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
+                  </h3>
+                  <p class="text-sm">I got your message bro</p>
+                  <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                </div>
+              </div>
+              <!-- Message End -->
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <!-- Message Start -->
+              <div class="media">
+                <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3" />
+                <div class="media-body">
+                  <h3 class="dropdown-item-title">
+                    Nora Silvester
+                    <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+                  </h3>
+                  <p class="text-sm">The subject goes here</p>
+                  <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                </div>
+              </div>
+              <!-- Message End -->
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+          </div>
+        </li>
+        <!-- Notifications Dropdown Menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link" data-toggle="dropdown" href="#">
+            <i class="far fa-bell"></i>
+            <span class="badge badge-warning navbar-badge">15</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+            <span class="dropdown-item dropdown-header">15 Notifications</span>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <i class="fas fa-envelope mr-2"></i> 4 new messages
+              <span class="float-right text-muted text-sm">3 mins</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <i class="fas fa-users mr-2"></i> 8 friend requests
+              <span class="float-right text-muted text-sm">12 hours</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <i class="fas fa-file mr-2"></i> 3 new reports
+              <span class="float-right text-muted text-sm">2 days</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+            <i class="fas fa-expand-arrows-alt"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#" role="button">
+            <i class="fas fa-th-large"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background:#264F3A ;">
+      <!-- Brand Logo -->
+      <a href="index3.html" class="brand-link">
+        <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+          style="opacity: 0.8" />
+        <span class="brand-text font-weight-light">Web Touch</span>
+      </a>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+          <div class="image">
+            <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image" />
+          </div>
+          <div class="info">
+            <a href="#" class="d-block">Welcome Admin</a>
+          </div>
+        </div>
+
+        <!-- SidebarSearch Form -->
+        <div class="form-inline">
+          <div class="input-group" data-widget="sidebar-search">
+            <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search" />
+            <div class="input-group-append">
+              <button class="btn btn-sidebar">
+                <i class="fas fa-search fa-fw"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  Dashboard
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="./index.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Dashboard</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="profile.html" class="nav-link">
+                <i class="nav-icon fas fa-copy"></i>
+                <p>Profile</p>
+              </a>
+            </li>
+           
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-copy"></i>
+                <p>
+                  Expense
+                  <i class="fas fa-angle-left right"></i>
+                  <span class="badge badge-info right">3</span>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="expense-category.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Expense Category</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="expense.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Expense</p>
+                  </a>
+                </li>
+            
+                <li class="nav-item">
+                  <a href="expense-list.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Expense List</p>
+                  </a>
+                </li>
+                
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="./deposit.html" class="nav-link">
+                <i class="nav-icon fas fa-copy"></i>
+                <p>Deposit</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./withdraw.html" class="nav-link">
+                <i class="nav-icon fas fa-copy"></i>
+                <p>Withdraw</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./fund-request.html" class="nav-link">
+                <i class="nav-icon fas fa-copy"></i>
+                <p>Fund Request</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./cashbook.html" class="nav-link">
+                <i class="nav-icon fas fa-copy"></i>
+                <p>Cash Book</p>
+              </a>
+            </li>
+           
+       
+            <li class="nav-item">
+              <a href="pos.html" class="nav-link">
+                <i class="nav-icon fas fa-copy"></i>
+                <p>Logout</p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1 class="m-0"> Add New Receive
+              </h1>
+            </div>
+
+            <div class="modal fade" id="modal-default" style="display: none;" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Add New Receive</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <form>
+                          <div class="card-body">
+
+                            <div class="input-group">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                  <i class="fas fa-user-tie"></i>
+                                </span>
+                              </div>
+                              <input type="text" class="form-control" placeholder="client">
+
+
+                              <div class="input-group-append">
+                                <div class="input-group-text"><a href="new_invoice.php" data-toggle="modal"
+                                    data-target="#modal-lg">
+                                    <i class="fas fa-plus-circle"></i>
+                                  </a></div>
+                              </div>
+
+                            </div>
+
+                            <div class="input-group mt-2" style="flex-wrap: unset">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                  <i class="fas fa-file-invoice"></i>
+                                </span>
+                              </div>
+                              <select class="form-control select2" style="width: 91%;">
+                                <option selected="selected">Invoice Id</option>
+                                <option>Alaska</option>
+                                <option>California</option>
+                                <option>Delaware</option>
+                                <option>Tennessee</option>
+                                <option>Texas</option>
+                                <option>Washington</option>
+                              </select>
+
+
+                            </div>
+
+
+                            <div class="form-group mt-2">
+
+                              <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                                <div class="input-group-append" data-target="#reservationdate"
+                                  data-toggle="datetimepicker">
+                                  <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                </div>
+                                <input type="text" class="form-control datetimepicker-input"
+                                  data-target="#reservationdate">
+
+                              </div>
+                            </div>
+                            <div class="input-group mt-2" style="flex-wrap: unset">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                  <i class="fas fa-file-invoice"></i>
+                                </span>
+                              </div>
+                              <select class="form-control select2" style="width: 80%;">
+                                <option selected="selected">Account</option>
+                                <option>Nagad</option>
+                                <option>Dutch Bangla</option>
+                                <option>Bkash</option>
+
+                              </select>
+                              <div class="input-group-text"><a href="new_invoice.php" data-toggle="modal"
+                                  data-target="#modal-lg4">
+                                  <i class="fas fa-plus-circle"></i>
+                                </a></div>
+
+                            </div>
+
+
+                            <div class="input-group mt-2">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-receipt"></i></span>
+                              </div>
+                              <input type="text" class="form-control" placeholder="Description">
+                            </div>
+                            <div class="input-group mt-2">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-coins"></i></span>
+                              </div>
+                              <input type="number" class="form-control" placeholder="Amount">
+                            </div>
+                            <div class="input-group mt-2" style="flex-wrap: unset">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                  <i class="fas fa-certificate"></i>
+                                </span>
+                              </div>
+                              <select class="form-control select2" style="width: 80%;">
+                                <option selected="selected">Select Income Category
+                                </option>
+                                <option>Nagad</option>
+                                <option>Dutch Bangla</option>
+                                <option>Bkash</option>
+
+                              </select>
+                              <div class="input-group-text"><a href="new_invoice.php" data-toggle="modal"
+                                  data-target="#modal-lg3">
+                                  <i class="fas fa-plus-circle"></i>
+                                </a></div>
+
+                            </div>
+                            <div class="input-group mt-2" style="flex-wrap: unset">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                  <i class="fas fa-money-check"></i>
+                                </span>
+                              </div>
+                              <select class="form-control select2" style="width:  89%">
+                                <option selected="selected">Select Payment</option>
+                                <option>Alaska</option>
+                                <option>California</option>
+                                <option>Delaware</option>
+                                <option>Tennessee</option>
+                                <option>Texas</option>
+                                <option>Washington</option>
+                              </select>
+
+
+                            </div>
+                            <div class="input-group mt-2" style="flex-wrap: unset">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                  <i class="fas fa-money-check"></i>
+                                </span>
+                              </div>
+                              <select class="form-control select2" style="width:  89%">
+                                <option selected="selected">Select Bank</option>
+                                <option>Alaska</option>
+                                <option>California</option>
+                                <option>Delaware</option>
+                                <option>Tennessee</option>
+                                <option>Texas</option>
+                                <option>Washington</option>
+                              </select>
+
+
+
+                            </div>
+
+
+                            <div class="input-group mt-2">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-bars"></i></span>
+                              </div>
+                              <input type="text" class="form-control" placeholder="Cheque No">
+                            </div>
+                            <div class="input-group mt-3">
+                              <span class="input-group-addon"><i class="fas fa-sms"></i></span>
+                              &nbsp;Send SMS <input type="checkbox" name="send_sms"> <br>
+                            </div>
+                            <div class="input-group mt-2">
+                              <span class="input-group-addon"><i class="fas fa-at"></i></span>
+                              &nbsp;Email Send <input type="checkbox" name="send_email" checked=""> <br>
+                            </div>
+
+
+
+                          </div>
+                          <!-- /.card-body -->
+
+                          <div class="card-footer">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                          </div>
+                        </form>
+
+
+
+
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+                <!-- /.modal-content -->
+              </div>
+              <!-- /.modal-dialog -->
+            </div>
+            <div class="modal fade show" id="modal-lg" style="display: none;" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Add New Client</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <form>
+                          <div class="card-body">
+
+
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-id-card"></i></span>
+                              </div>
+                              <input type="number" class="form-control" placeholder="id">
+                            </div>
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user-tie"></i></span>
+                              </div>
+                              <input type="text" class="form-control" placeholder="Proprietor name">
+                            </div>
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-address-book"></i></span>
+                              </div>
+                              <input type="text" class="form-control" placeholder="Address">
+                            </div>
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-mobile"></i></span>
+                              </div>
+                              <input type="number" class="form-control" placeholder="Phone 1">
+                            </div>
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-mobile"></i></span>
+                              </div>
+                              <input type="number" class="form-control" placeholder="Phone 2">
+                            </div>
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                              </div>
+                              <input type="email" class="form-control" placeholder="Email">
+                            </div>
+
+                            <div class="form-group">
+
+
+
+
+                              <div class="input-group-append">
+                                <div style="width: 90%;">
+                                  <select class="form-control select2">
+                                    <option selected="selected">Group</option>
+                                    <option>Nagad</option>
+
+
+                                  </select>
+                                </div>
+                                <div class="input-group-text"><a href="new_invoice.php" data-toggle="modal"
+                                    data-target="#modal-lg2">
+                                    <i class="fas fa-plus-circle"></i>
+                                  </a></div>
+                              </div>
+                            </div>
+
+
+
+
+
+
+
+
+                          </div>
+                          <!-- /.card-body -->
+
+                          <div class="card-footer">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                          </div>
+                        </form>
+
+
+
+
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+                <!-- /.modal-content -->
+              </div>
+              <!-- /.modal-dialog -->
+            </div>
+            <div class="modal fade show" id="modal-lg2" style="display: none;" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Add New Group</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <form>
+                          <div class="card-body">
+
+
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-id-card"></i></span>
+                              </div>
+                              <input type="text" class="form-control" placeholder="name">
+                            </div>
+
+
+
+                          </div>
+                          <!-- /.card-body -->
+
+                          <div class="card-footer">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                          </div>
+                        </form>
+
+
+
+
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+                <!-- /.modal-content -->
+              </div>
+              <!-- /.modal-dialog -->
+            </div>
+            <div class="modal fade show" id="modal-lg3" style="display: none;" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Add Income Category</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <form>
+                          <div class="card-body">
+
+
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-id-card"></i></span>
+                              </div>
+                              <input type="text" class="form-control" placeholder="name">
+                            </div>
+
+
+
+                          </div>
+                          <!-- /.card-body -->
+
+                          <div class="card-footer">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                          </div>
+                        </form>
+
+
+
+
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+                <!-- /.modal-content -->
+              </div>
+              <!-- /.modal-dialog -->
+            </div>
+            <div class="modal fade show" id="modal-lg4" style="display: none;" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Add Account</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <form>
+                          <div class="card-body">
+
+
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-heading"></i></span>
+                              </div>
+                              <input type="text" class="form-control" placeholder="Account Title">
+                            </div>
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-info-circle"></i></span>
+                              </div>
+                              <input type="text" class="form-control" placeholder="Description">
+                            </div>
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-dollar-sign"></i></span>
+                              </div>
+                              <input type="text" class="form-control" placeholder="Balance">
+                            </div>
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-university"></i></span>
+                              </div>
+                              <input type="name" class="form-control" placeholder="Account Number">
+                            </div>
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                              </div>
+                              <input type="number" class="form-control" placeholder="Contract Person">
+                            </div>
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-mobile"></i></span>
+                              </div>
+                              <input type="number" class="form-control" placeholder="mobile">
+                            </div>
+
+
+                          </div>
+                          <!-- /.card-body -->
+
+                          <div class="card-footer">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                          </div>
+                        </form>
+
+
+
+
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+                <!-- /.modal-content -->
+              </div>
+              <!-- /.modal-dialog -->
+            </div>
+            <!-- /.modal -->
+            <div class="modal fade" id="modal-expense" style="display: none;" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Add New Expense</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <form>
+                          <div class="card-body">
+                            <div class="form-group mt-2">
+
+                              <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                                <div class="input-group-append" data-target="#reservationdate"
+                                  data-toggle="datetimepicker">
+                                  <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                </div>
+                                <input type="text" class="form-control datetimepicker-input"
+                                  data-target="#reservationdate">
+
+                              </div>
+                            </div>
+                            <div class="input-group mt-2" style="flex-wrap: unset">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                  <i class="fas fa-university"></i>
+                                </span>
+                              </div>
+                              <select class="form-control select2" style="width: 90%;">
+                                <option selected="selected">Account</option>
+                                <option>Nagad</option>
+                                <option>Dutch Bangla</option>
+                                <option>Bkash</option>
+
+
+                              </select>
+                              <div class="input-group-text"><a href="new_invoice.php" data-toggle="modal"
+                                  data-target="#modal-account">
+                                  <i class="fas fa-plus-circle"></i>
+                                </a></div>
+                            </div>
+
+
+
+                            <div class="input-group mt-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-receipt"></i></span>
+                              </div>
+                              <input type="text" class="form-control" placeholder="Description">
+                            </div>
+                            <div class="input-group mt-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-coins"></i></span>
+                              </div>
+                              <input type="number" class="form-control" placeholder="Amount">
+                            </div>
+                            <div class="input-group mt-2" style="flex-wrap: unset">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                  <i class="fas fa-university"></i>
+                                </span>
+                              </div>
+                              <select class="form-control select2" style="width: 90%;">
+                                <option selected="selected">Expense Category</option>
+                                <option>Nagad</option>
+                                <option>Dutch Bangla</option>
+                                <option>Bkash</option>
+
+
+                              </select>
+                              <div class="input-group-text"><a href="new_invoice.php" data-toggle="modal"
+                                  data-target="#modal-category">
+                                  <i class="fas fa-plus-circle"></i>
+                                </a></div>
+                            </div>
+                            <div class="input-group mt-2" style="flex-wrap: unset">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                  <i class="fas fa-university"></i>
+                                </span>
+                              </div>
+                              <select class="form-control select2" style="width: 90%;">
+                                <option selected="selected">Sub Category</option>
+                                <option>Nagad</option>
+                                <option>Dutch Bangla</option>
+                                <option>Bkash</option>
+
+                              </select>
+                              <div class="input-group-text"><a href="new_invoice.php" data-toggle="modal"
+                                  data-target="#modal-sub-category">
+                                  <i class="fas fa-plus-circle"></i>
+                                </a></div>
+                            </div>
+                            <div class="input-group mt-2" style="flex-wrap: unset">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                  <i class="fas fa-money-check"></i>
+                                </span>
+                              </div>
+                              <select class="form-control select2" style="width:  89%">
+                                <option selected="selected">Select Payment</option>
+                                <option>Alaska</option>
+                                <option>California</option>
+                                <option>Delaware</option>
+                                <option>Tennessee</option>
+                                <option>Texas</option>
+                                <option>Washington</option>
+                              </select>
+
+
+                            </div>
+                            <div class="input-group mt-2" style="flex-wrap: unset">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                  <i class="fas fa-money-check"></i>
+                                </span>
+                              </div>
+                              <select class="form-control select2" style="width:  89%">
+                                <option selected="selected">Select Bank</option>
+                                <option>Alaska</option>
+                                <option>California</option>
+                                <option>Delaware</option>
+                                <option>Tennessee</option>
+                                <option>Texas</option>
+                                <option>Washington</option>
+                              </select>
+
+
+                            </div>
+
+
+
+                            <div class="input-group mt-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-bars"></i></span>
+                              </div>
+                              <input type="text" class="form-control" placeholder="Cheque No">
+                            </div>
+                            <div class="form-group mt-3">
+                              <!-- <label for="customFile">Custom File</label> -->
+
+                              <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="customFile">
+                                <label class="custom-file-label" for="customFile">Choose file</label>
+                              </div>
+                            </div>
+
+
+
+                          </div>
+                          <!-- /.card-body -->
+
+                          <div class="card-footer">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                          </div>
+                        </form>
+
+
+
+
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+                <!-- /.modal-content -->
+              </div>
+              <!-- /.modal-dialog -->
+            </div>
+            <div class="modal fade show" id="modal-account" style="display: none;" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Add Account</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <form>
+                          <div class="card-body">
+
+
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-heading"></i></span>
+                              </div>
+                              <input type="text" class="form-control" placeholder="Account Title">
+                            </div>
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-info-circle"></i></span>
+                              </div>
+                              <input type="text" class="form-control" placeholder="Description">
+                            </div>
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-dollar-sign"></i></span>
+                              </div>
+                              <input type="text" class="form-control" placeholder="Balance">
+                            </div>
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-university"></i></span>
+                              </div>
+                              <input type="name" class="form-control" placeholder="Account Number">
+                            </div>
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                              </div>
+                              <input type="number" class="form-control" placeholder="Contract Person">
+                            </div>
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-mobile"></i></span>
+                              </div>
+                              <input type="number" class="form-control" placeholder="mobile">
+                            </div>
+
+
+                          </div>
+                          <!-- /.card-body -->
+
+                          <div class="card-footer">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                          </div>
+                        </form>
+
+
+
+
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+                <!-- /.modal-content -->
+              </div>
+              <!-- /.modal-dialog -->
+            </div>
+            <div class="modal fade show" id="modal-category" style="display: none;" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Add Expense Category</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <form>
+                          <div class="card-body">
+
+
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-id-card"></i></span>
+                              </div>
+                              <input type="text" class="form-control" placeholder="name">
+                            </div>
+
+
+
+                          </div>
+                          <!-- /.card-body -->
+
+                          <div class="card-footer">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                          </div>
+                        </form>
+
+
+
+
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+                <!-- /.modal-content -->
+              </div>
+              <!-- /.modal-dialog -->
+            </div>
+            <div class="modal fade show" id="modal-sub-category" style="display: none;" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Add Expense Category</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <form>
+                          <div class="card-body">
+
+
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-id-card"></i></span>
+                              </div>
+                              <input type="text" class="form-control" placeholder="name">
+                            </div>
+
+
+
+                          </div>
+                          <!-- /.card-body -->
+
+                          <div class="card-footer">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                          </div>
+                        </form>
+
+
+
+
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+                <!-- /.modal-content -->
+              </div>
+              <!-- /.modal-dialog -->
+            </div>
+            <!-- /.col -->
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active">Dashboard v1</li>
+              </ol>
+            </div>
+            <!-- /.col -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+      </div>
+      <!-- /.content-header -->
+
+      <!-- Main content -->
+      <section class="content">
+        <div class="container-fluid">
+          <!-- Small boxes (Stat box) -->
+
+          <!-- /.row -->
+          <!-- Main row -->
+
+          <div class="row">
+
+            <div class="col-12 col-sm-6 col-md-3">
+
+              <div class="info-box" style="background-color: #1D40A1;">
+
+                <img src="https://demo.bhisab.com/images/icon/bill.png" alt="" style="width: 50px;height: 50px;">
+
+
+                <div class="info-box-content">
+                  <div style="color: white;margin-left: 60px;">
+                    <h3 class="font-bold">Tk 46,393.00</h3>
+                    <span class="info-box-number">Total Sales</span>
+
+                  </div>
+                </div>
+                <!-- /.info-box-content -->
+              </div>
+              <!-- /.info-box -->
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+              <div class="info-box" style="background-color: #D1D4A0;">
+
+                <img src="https://demo.bhisab.com/images/icon/income.png" alt="" style="width: 50px;height: 50px;">
+
+
+                <div class="info-box-content">
+                  <div style="color: white;margin-left: 60px;">
+                    <h3 class="font-bold">Tk 56,393.00</h3>
+                    <span class="info-box-number">Total Receive</span>
+
+                  </div>
+                </div>
+                <!-- /.info-box-content -->
+              </div>
+              <!-- /.info-box -->
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+              <div class="info-box" style="background-color: #7A9E95;">
+
+                <img src="https://demo.bhisab.com/images/icon/bill.png" alt="" style="width: 50px;height: 50px;">
+
+
+                <div class="info-box-content">
+                  <div style="color: white;margin-left: 60px;">
+                    <h3 class="font-bold">Tk 146,393.00</h3>
+                    <span class="info-box-number">Total Expense</span>
+
+                  </div>
+                </div>
+                <!-- /.info-box-content -->
+              </div>
+              <!-- /.info-box -->
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+              <div class="info-box" style="background-color: #995C83;">
+
+                <img src="https://demo.bhisab.com/images/icon/conversion.png" alt="" style="width: 50px;height: 50px;">
+
+
+                <div class="info-box-content">
+                  <div style="color: white;margin-left: 60px;">
+                    <h3 class="font-bold">Tk 46,393.00</h3>
+                    <span class="info-box-number">Total Sales</span>
+
+                  </div>
+                </div>
+                <!-- /.info-box-content -->
+              </div>
+              <!-- /.info-box -->
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="col-12 col-sm-6 col-md-3">
+              <div class="info-box" style="background-color: #1D40A1;">
+
+                <img src="https://demo.bhisab.com/images/icon/bill.png" alt="" style="width: 50px;height: 50px;">
+
+
+                <div class="info-box-content">
+                  <div style="color: white;margin-left: 60px;">
+                    <h3 class="font-bold">Tk 46,393.00</h3>
+                    <span class="info-box-number">Total Sales</span>
+
+                  </div>
+                </div>
+                <!-- /.info-box-content -->
+              </div>
+              <!-- /.info-box -->
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+              <div class="info-box" style="background-color: #D1D4A0;">
+
+                <img src="https://demo.bhisab.com/images/icon/income.png" alt="" style="width: 50px;height: 50px;">
+
+
+                <div class="info-box-content">
+                  <div style="color: white;margin-left: 60px;">
+                    <h3 class="font-bold">Tk 56,393.00</h3>
+                    <span class="info-box-number">Total Receive</span>
+
+                  </div>
+                </div>
+                <!-- /.info-box-content -->
+              </div>
+              <!-- /.info-box -->
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+              <div class="info-box" style="background-color: #7A9E95;">
+
+                <img src="https://demo.bhisab.com/images/icon/bill.png" alt="" style="width: 50px;height: 50px;">
+
+
+                <div class="info-box-content">
+                  <div style="color: white;margin-left: 60px;">
+                    <h3 class="font-bold">Tk 146,393.00</h3>
+                    <span class="info-box-number">Total Expense</span>
+
+                  </div>
+                </div>
+                <!-- /.info-box-content -->
+              </div>
+              <!-- /.info-box -->
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+              <div class="info-box" style="background-color: #995C83;">
+
+                <img src="https://demo.bhisab.com/images/icon/conversion.png" alt="" style="width: 50px;height: 50px;">
+
+
+                <div class="info-box-content">
+                  <div style="color: white;margin-left: 60px;">
+                    <h3 class="font-bold">Tk 46,393.00</h3>
+                    <span class="info-box-number">Total Sales</span>
+
+                  </div>
+                </div>
+                <!-- /.info-box-content -->
+              </div>
+              <!-- /.info-box -->
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="col-12 col-sm-6 col-md-3">
+              <div class="info-box" style="background-color: #1D40A1;">
+
+                <img src="https://demo.bhisab.com/images/icon/bill.png" alt="" style="width: 50px;height: 50px;">
+
+
+                <div class="info-box-content">
+                  <div style="color: white;margin-left: 60px;">
+                    <h3 class="font-bold">Tk 46,393.00</h3>
+                    <span class="info-box-number">Total Sales</span>
+
+                  </div>
+                </div>
+                <!-- /.info-box-content -->
+              </div>
+              <!-- /.info-box -->
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+              <div class="info-box" style="background-color: #D1D4A0;">
+
+                <img src="https://demo.bhisab.com/images/icon/income.png" alt="" style="width: 50px;height: 50px;">
+
+
+                <div class="info-box-content">
+                  <div style="color: white;margin-left: 60px;">
+                    <h3 class="font-bold">Tk 56,393.00</h3>
+                    <span class="info-box-number">Total Receive</span>
+
+                  </div>
+                </div>
+                <!-- /.info-box-content -->
+              </div>
+              <!-- /.info-box -->
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+              <div class="info-box" style="background-color: #7A9E95;">
+
+                <img src="https://demo.bhisab.com/images/icon/bill.png" alt="" style="width: 50px;height: 50px;">
+
+
+                <div class="info-box-content">
+                  <div style="color: white;margin-left: 60px;">
+                    <h3 class="font-bold">Tk 146,393.00</h3>
+                    <span class="info-box-number">Total Expense</span>
+
+                  </div>
+                </div>
+                <!-- /.info-box-content -->
+              </div>
+              <!-- /.info-box -->
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+              <div class="info-box" style="background-color: #995C83;">
+
+                <img src="https://demo.bhisab.com/images/icon/conversion.png" alt="" style="width: 50px;height: 50px;">
+
+
+                <div class="info-box-content">
+                  <div style="color: white;margin-left: 60px;">
+                    <h3 class="font-bold">Tk 46,393.00</h3>
+                    <span class="info-box-number">Total Sales</span>
+
+                  </div>
+                </div>
+                <!-- /.info-box-content -->
+              </div>
+              <!-- /.info-box -->
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="col-12 col-sm-6 col-md-3">
+              <div class="info-box" style="background-color: #1D40A1;">
+
+                <img src="https://demo.bhisab.com/images/icon/bill.png" alt="" style="width: 50px;height: 50px;">
+
+
+                <div class="info-box-content">
+                  <div style="color: white;margin-left: 60px;">
+                    <h3 class="font-bold">Tk 46,393.00</h3>
+                    <span class="info-box-number">Total Sales</span>
+
+                  </div>
+                </div>
+                <!-- /.info-box-content -->
+              </div>
+              <!-- /.info-box -->
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+              <div class="info-box" style="background-color: #D1D4A0;">
+
+                <img src="https://demo.bhisab.com/images/icon/income.png" alt="" style="width: 50px;height: 50px;">
+
+
+                <div class="info-box-content">
+                  <div style="color: white;margin-left: 60px;">
+                    <h3 class="font-bold">Tk 56,393.00</h3>
+                    <span class="info-box-number">Total Receive</span>
+
+                  </div>
+                </div>
+                <!-- /.info-box-content -->
+              </div>
+              <!-- /.info-box -->
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+              <div class="info-box" style="background-color: #7A9E95;">
+
+                <img src="https://demo.bhisab.com/images/icon/bill.png" alt="" style="width: 50px;height: 50px;">
+
+
+                <div class="info-box-content">
+                  <div style="color: white;margin-left: 60px;">
+                    <h3 class="font-bold">Tk 146,393.00</h3>
+                    <span class="info-box-number">Total Expense</span>
+
+                  </div>
+                </div>
+                <!-- /.info-box-content -->
+              </div>
+              <!-- /.info-box -->
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+              <div class="info-box" style="background-color: #995C83;">
+
+                <img src="https://demo.bhisab.com/images/icon/conversion.png" alt="" style="width: 50px;height: 50px;">
+
+
+                <div class="info-box-content">
+                  <div style="color: white;margin-left: 60px;">
+                    <h3 class="font-bold">Tk 46,393.00</h3>
+                    <span class="info-box-number">Total Sales</span>
+
+                  </div>
+                </div>
+                <!-- /.info-box-content -->
+              </div>
+              <!-- /.info-box -->
+            </div>
+
+          </div>
+          <div class="row">
+
+            <!-- Monthly Report -->
+
+
+
+
+
+
+
+            <hr>
+
+            <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"
+              integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css"
+              integrity="sha256-aa0xaJgmK/X74WM224KMQeNQC2xYKwlAt08oZqjeF0E=" crossorigin="anonymous">
+            <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"
+              integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw=" crossorigin="anonymous"></script>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <div class="chartjs-size-monitor">
+                <div class="chartjs-size-monitor-expand">
+                  <div class=""></div>
+                </div>
+                <div class="chartjs-size-monitor-shrink">
+                  <div class=""></div>
+                </div>
+              </div>
+              <canvas id="horizontal_week_view_sales" style="height: 297px; width: 537px; display: block;" width="537"
+                height="297" class="chartjs-render-monitor"></canvas>
+              <script>
+                var horizontal_week_view_sales = document.getElementById('horizontal_week_view_sales');
+                var horizontal_myBarChart = new Chart(horizontal_week_view_sales, {
+                  type: 'horizontalBar',
+                  data: {
+                    labels: ["24 Jul", "23 Jul", "22 Jul", "21 Jul", "20 Jul", "19 Jul", "18 Jul"],
+                    datasets: [{
+                      label: 'Sales',
+                      data: [0, 6600, 13580, 3420, 0, 0, 0],
+                      backgroundColor: ["rgba(59, 166, 221, 0.4)", "rgba(172, 104, 110, 0.4)", "rgba(126, 60, 230, 0.4)", "rgba(179, 229, 145, 0.4)", "rgba(239, 60, 246, 0.4)", "rgba(193, 160, 138, 0.4)", "rgba(11, 217, 25, 0.4)"],
+                      borderColor: ["rgba(132, 48, 224, 1)", "rgba(255, 5, 138, 1)", "rgba(95, 9, 176, 1)", "rgba(172, 247, 75, 1)", "rgba(199, 246, 2, 1)", "rgba(147, 246, 11, 1)", "rgba(82, 3, 166, 1)"],
+                      borderWidth: 1
+                    }]
+                  },
+                  options: {
+                  }
+                });
+              </script>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <div class="chartjs-size-monitor">
+                <div class="chartjs-size-monitor-expand">
+                  <div class=""></div>
+                </div>
+                <div class="chartjs-size-monitor-shrink">
+                  <div class=""></div>
+                </div>
+              </div>
+              <canvas id="horizontal_week_view_receive" style="height: 297px; width: 537px; display: block;" width="537"
+                height="297" class="chartjs-render-monitor"></canvas>
+              <script>
+                var horizontal_week_view_receive = document.getElementById('horizontal_week_view_receive');
+                var horizontal_myBarChart = new Chart(horizontal_week_view_receive, {
+                  type: 'horizontalBar',
+                  data: {
+                    labels: ["24 Jul", "23 Jul", "22 Jul", "21 Jul", "20 Jul", "19 Jul", "18 Jul"],
+                    datasets: [{
+                      label: 'Receive',
+                      data: [null, null, 5, 500000, null, 5000, null],
+                      backgroundColor: ["rgba(59, 166, 221, 0.4)", "rgba(172, 104, 110, 0.4)", "rgba(126, 60, 230, 0.4)", "rgba(179, 229, 145, 0.4)", "rgba(239, 60, 246, 0.4)", "rgba(193, 160, 138, 0.4)", "rgba(11, 217, 25, 0.4)"],
+                      borderColor: ["rgba(132, 48, 224, 1)", "rgba(255, 5, 138, 1)", "rgba(95, 9, 176, 1)", "rgba(172, 247, 75, 1)", "rgba(199, 246, 2, 1)", "rgba(147, 246, 11, 1)", "rgba(82, 3, 166, 1)"],
+                      borderWidth: 1
+                    }]
+                  },
+                  options: {
+
+                  }
+                });
+              </script>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <div class="chartjs-size-monitor">
+                <div class="chartjs-size-monitor-expand">
+                  <div class=""></div>
+                </div>
+                <div class="chartjs-size-monitor-shrink">
+                  <div class=""></div>
+                </div>
+              </div>
+              <canvas id="horizontal_week_view_expense" style="height: 297px; width: 537px; display: block;" width="537"
+                height="297" class="chartjs-render-monitor"></canvas>
+              <script>
+                var horizontal_week_view_expense = document.getElementById('horizontal_week_view_expense');
+                var horizontal_myBarChart = new Chart(horizontal_week_view_expense, {
+                  type: 'horizontalBar',
+                  data: {
+                    labels: ["24 Jul", "23 Jul", "22 Jul", "21 Jul", "20 Jul", "19 Jul", "18 Jul"],
+                    datasets: [{
+                      label: 'Expense',
+                      data: [0, 0, 0, 100000, 0, 0, 0],
+                      backgroundColor: ["rgba(59, 166, 221, 0.4)", "rgba(172, 104, 110, 0.4)", "rgba(126, 60, 230, 0.4)", "rgba(179, 229, 145, 0.4)", "rgba(239, 60, 246, 0.4)", "rgba(193, 160, 138, 0.4)", "rgba(11, 217, 25, 0.4)"],
+                      borderColor: ["rgba(132, 48, 224, 1)", "rgba(255, 5, 138, 1)", "rgba(95, 9, 176, 1)", "rgba(172, 247, 75, 1)", "rgba(199, 246, 2, 1)", "rgba(147, 246, 11, 1)", "rgba(82, 3, 166, 1)"],
+                      borderWidth: 1
+                    }]
+                  },
+                  options: {
+
+                  }
+                });
+              </script>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <div class="chartjs-size-monitor">
+                <div class="chartjs-size-monitor-expand">
+                  <div class=""></div>
+                </div>
+                <div class="chartjs-size-monitor-shrink">
+                  <div class=""></div>
+                </div>
+              </div>
+              <canvas id="sales_amount_bar_chart" style="height: 300px; width: 100%; display: block;" width="1651"
+                height="300" class="chartjs-render-monitor"></canvas>
+              <script>
+                var sales_amount_bar_chart = document.getElementById('sales_amount_bar_chart');
+                var sales_amount_bar_display = new Chart(sales_amount_bar_chart, {
+                  type: 'bar',
+                  data: {
+                    labels: ['6 Jul 2022', '3 Jul 2022', '10 Jul 2022', '11 Jul 2022', '14 Jul 2022', '16 Jul 2022', '18 Jul 2022', '21 Jul 2022', '22 Jul 2022', '23 Jul 2022',],
+                    datasets: [{
+                      label: 'Sales',
+                      data: ['0', '0', '290', '0', '3', '22500', '0', '3420', '13580', '6600',],
+                      backgroundColor: [
+                        'rgba(57, 234, 133, 0.5)', 'rgba(76, 162, 57, 0.5)', 'rgba(43, 45, 170, 0.5)', 'rgba(57, 113, 92, 0.5)', 'rgba(132, 81, 72, 0.5)', 'rgba(149, 183, 2, 0.5)', 'rgba(38, 206, 120, 0.5)', 'rgba(170, 129, 136, 0.5)', 'rgba(89, 79, 217, 0.5)', 'rgba(102, 23, 210, 0.5)',
+                      ],
+                      borderColor: [
+                        'rgba(240, 220, 21, 1)', 'rgba(171, 121, 67, 1)', 'rgba(124, 245, 224, 1)', 'rgba(74, 93, 42, 1)', 'rgba(53, 195, 51, 1)', 'rgba(123, 115, 80, 1)', 'rgba(70, 46, 45, 1)', 'rgba(142, 66, 170, 1)', 'rgba(188, 242, 174, 1)', 'rgba(66, 187, 109, 1)',
+                      ],
+                      borderWidth: 1
+                    }]
+                  },
+                  options: {
+                    scales: {
+                      yAxes: [{
+                        ticks: {
+                          beginAtZero: true
+                        }
+                      }]
+                    }
+                  }
+                });
+              </script>
+            </div>
+          </div>
+          <!-- /.row (main row) -->
+        </div>
+        <!-- /.container-fluid -->
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <footer class="main-footer">
+      <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+      All rights reserved.
+      <div class="float-right d-none d-sm-inline-block"><b>Version</b> 3.2.0</div>
+    </footer>
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+  </div>
+  <!-- ./wrapper -->
+
+  <!-- jQuery -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Select2 -->
+  <script src="plugins/select2/js/select2.full.min.js"></script>
+  <script src="../plugins/toastr/toastr.min.js"></script>
+  <!-- Bootstrap4 Duallistbox -->
+  <script src="plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
+  <!-- InputMask -->
+  <script src="plugins/moment/moment.min.js"></script>
+  <script src="plugins/inputmask/jquery.inputmask.min.js"></script>
+  <!-- date-range-picker -->
+  <script src="plugins/daterangepicker/daterangepicker.js"></script>
+  <!-- bootstrap color picker -->
+  <script src="plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+  <!-- Tempusdominus Bootstrap 4 -->
+  <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+  <!-- Bootstrap Switch -->
+  <script src="plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+  <!-- BS-Stepper -->
+  <script src="plugins/bs-stepper/js/bs-stepper.min.js"></script>
+  <!-- dropzonejs -->
+  <script src="plugins/dropzone/min/dropzone.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="dist/js/adminlte.min.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="dist/js/demo.js"></script>
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- DataTables  & Plugins -->
+  <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+  <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+  <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+  <script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+  <script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+  <script src="plugins/jszip/jszip.min.js"></script>
+  <script src="plugins/pdfmake/pdfmake.min.js"></script>
+  <script src="plugins/pdfmake/vfs_fonts.js"></script>
+  <script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+  <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+  <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+
+
+
+  <!-- Page specific script -->
+  <script>
+    $(function () {
+      //Initialize Select2 Elements
+      $(".select2").select2();
+
+      //Initialize Select2 Elements
+      $(".select2bs4").select2({
+        theme: "bootstrap4",
+      });
+
+      $("#example1")
+        .DataTable({
+          responsive: true,
+          lengthChange: false,
+          autoWidth: false,
+          buttons: ["copy", "csv", "excel", "pdf", "print", "colvis"],
+        })
+        .buttons()
+        .container()
+        .appendTo("#example1_wrapper .col-md-6:eq(0)");
+      $("#example2").DataTable({
+        paging: true,
+        lengthChange: false,
+        searching: false,
+        ordering: true,
+        info: true,
+        autoWidth: false,
+        responsive: true,
+      });
+    });
+  </script>
+
+  <script>
+    $(function () {
+      //Initialize Select2 Elements
+      $(".select2").select2();
+
+      //Initialize Select2 Elements
+      $(".select2bs4").select2({
+        theme: "bootstrap4",
+      });
+
+      //Datemask dd/mm/yyyy
+      $("#datemask").inputmask("dd/mm/yyyy", { placeholder: "dd/mm/yyyy" });
+      //Datemask2 mm/dd/yyyy
+      $("#datemask2").inputmask("mm/dd/yyyy", { placeholder: "mm/dd/yyyy" });
+      //Money Euro
+      $("[data-mask]").inputmask();
+
+      //Date picker
+      $("#reservationdate").datetimepicker({
+        format: "L",
+      });
+      $("#reservationdate2").datetimepicker({
+        format: "L",
+      });
+
+      //Date and time picker
+      $("#reservationdatetime").datetimepicker({ icons: { time: "far fa-clock" } });
+
+      //Date range picker
+      $("#reservation").daterangepicker();
+      //Date range picker with time picker
+      $("#reservationtime").daterangepicker({
+        timePicker: true,
+        timePickerIncrement: 30,
+        locale: {
+          format: "MM/DD/YYYY hh:mm A",
+        },
+      });
+      //Date range as a button
+      $("#daterange-btn").daterangepicker(
+        {
+          ranges: {
+            Today: [moment(), moment()],
+            Yesterday: [moment().subtract(1, "days"), moment().subtract(1, "days")],
+            "Last 7 Days": [moment().subtract(6, "days"), moment()],
+            "Last 30 Days": [moment().subtract(29, "days"), moment()],
+            "This Month": [moment().startOf("month"), moment().endOf("month")],
+            "Last Month": [moment().subtract(1, "month").startOf("month"), moment().subtract(1, "month").endOf("month")],
+          },
+          startDate: moment().subtract(29, "days"),
+          endDate: moment(),
+        },
+        function (start, end) {
+          $("#reportrange span").html(start.format("MMMM D, YYYY") + " - " + end.format("MMMM D, YYYY"));
+        }
+      );
+
+      //Timepicker
+      $("#timepicker").datetimepicker({
+        format: "LT",
+      });
+
+      //Bootstrap Duallistbox
+      $(".duallistbox").bootstrapDualListbox();
+
+      //Colorpicker
+      $(".my-colorpicker1").colorpicker();
+      //color picker with addon
+      $(".my-colorpicker2").colorpicker();
+
+      $(".my-colorpicker2").on("colorpickerChange", function (event) {
+        $(".my-colorpicker2 .fa-square").css("color", event.color.toString());
+      });
+
+      $("input[data-bootstrap-switch]").each(function () {
+        $(this).bootstrapSwitch("state", $(this).prop("checked"));
+      });
+    });
+    // BS-Stepper Init
+    document.addEventListener("DOMContentLoaded", function () {
+      window.stepper = new Stepper(document.querySelector(".bs-stepper"));
+    });
+
+    // DropzoneJS Demo Code Start
+    Dropzone.autoDiscover = false;
+
+    // Get the template HTML and remove it from the doumenthe template HTML and remove it from the doument
+    var previewNode = document.querySelector("#template");
+    previewNode.id = "";
+    var previewTemplate = previewNode.parentNode.innerHTML;
+    previewNode.parentNode.removeChild(previewNode);
+
+    var myDropzone = new Dropzone(document.body, {
+      // Make the whole body a dropzone
+      url: "/target-url", // Set the url
+      thumbnailWidth: 80,
+      thumbnailHeight: 80,
+      parallelUploads: 20,
+      previewTemplate: previewTemplate,
+      autoQueue: false, // Make sure the files aren't queued until manually added
+      previewsContainer: "#previews", // Define the container to display the previews
+      clickable: ".fileinput-button", // Define the element that should be used as click trigger to select files.
+    });
+
+    myDropzone.on("addedfile", function (file) {
+      // Hookup the start button
+      file.previewElement.querySelector(".start").onclick = function () {
+        myDropzone.enqueueFile(file);
+      };
+    });
+
+    // Update the total progress bar
+    myDropzone.on("totaluploadprogress", function (progress) {
+      document.querySelector("#total-progress .progress-bar").style.width = progress + "%";
+    });
+
+    myDropzone.on("sending", function (file) {
+      // Show the total progress bar when upload starts
+      document.querySelector("#total-progress").style.opacity = "1";
+      // And disable the start button
+      file.previewElement.querySelector(".start").setAttribute("disabled", "disabled");
+    });
+
+    // Hide the total progress bar when nothing's uploading anymore
+    myDropzone.on("queuecomplete", function (progress) {
+      document.querySelector("#total-progress").style.opacity = "0";
+    });
+
+    // Setup the buttons for all transfers
+    // The "add files" button doesn't need to be setup because the config
+    // `clickable` has already been specified.
+    document.querySelector("#actions .start").onclick = function () {
+      myDropzone.enqueueFiles(myDropzone.getFilesWithStatus(Dropzone.ADDED));
+    };
+    document.querySelector("#actions .cancel").onclick = function () {
+      myDropzone.removeAllFiles(true);
+    };
+  // DropzoneJS Demo Code End
+  </script>
+
+</body>
+
+</html>
