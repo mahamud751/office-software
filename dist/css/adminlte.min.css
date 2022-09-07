@@ -11163,6 +11163,7 @@ body.sidebar-collapse:not(.sidebar-mini-xs):not(.sidebar-mini-md):not(.sidebar-m
   .sidebar-open .main-sidebar::before {
     margin-left: 0;
   }
+
 }
 body:not(.layout-fixed) .main-sidebar {
   height: inherit;
@@ -36109,7 +36110,7 @@ a.disabled.mailbox-attachment-close {
   -ms-flex: 1;
   flex: 1;
   padding: 0 10px;
-  overflow: hidden;
+ 
 }
 .info-box .info-box-number {
   display: block;
@@ -36204,6 +36205,7 @@ a.disabled.mailbox-attachment-close {
   .col-xl-3 .info-box .progress-description {
     display: none;
   }
+ 
 }
 @media (min-width: 992px) {
   .col-lg-2 .info-box .progress-description,
@@ -36211,7 +36213,9 @@ a.disabled.mailbox-attachment-close {
   .col-xl-2 .info-box .progress-description {
     font-size: 0.75rem;
     display: block;
+    
   }
+  
   .col-lg-3 .info-box .progress-description,
   .col-md-3 .info-box .progress-description,
   .col-xl-3 .info-box .progress-description {
@@ -37540,6 +37544,7 @@ a.disabled.mailbox-attachment-close {
   .error-page {
     width: 100%;
   }
+  
 }
 .error-page > .headline {
   float: left;
